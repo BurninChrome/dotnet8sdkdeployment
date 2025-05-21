@@ -1,0 +1,2 @@
+[dotnet8servers]
+dotnet8-target-1 ansible_host=10.186.0.8
