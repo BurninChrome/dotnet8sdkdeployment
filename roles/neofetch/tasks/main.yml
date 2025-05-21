@@ -1,0 +1,12 @@
+---
+- name: Install neofetch
+  become: true
+  ansible.builtin.apt:
+    name: neofetch
+
+- name: Add neofetch.sh to /etc/profile.d/
+  become: true
+  ansible.builtin.copy:
+    src: neofetch.sh
+    dest: /etc/profile.d/neofetch.sh
+    mode: '0644'

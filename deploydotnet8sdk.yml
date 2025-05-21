@@ -1,5 +1,5 @@
 ---
 - name: Deploy .net-8.0 sdk
-  hosts: dotnet8servers
+  hosts: dotnet8
   roles:
     - dotnet8sdk
