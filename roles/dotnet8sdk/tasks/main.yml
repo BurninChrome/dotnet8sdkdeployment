@@ -1,7 +1,11 @@
 ---
-- name: Update packages information and install dotnet-sdk-8.0 package
+- name: Update packages cache
+  become: true
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Install dotnet-8-sdk package
   become: true
   ansible.builtin.apt:
     name: dotnet-sdk-8.0
-    update_cache: true
-    state: present
+
