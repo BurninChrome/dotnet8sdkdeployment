@@ -1,5 +1,0 @@
-[dotnet8servers]
-dotnet8-target-1 ansible_host=10.186.0.8
-
-[dotnet8servers:vars]
-ansible_python_interpreter=/usr/bin/python3.12
