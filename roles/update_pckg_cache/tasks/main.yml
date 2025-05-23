@@ -1,11 +1,11 @@
 ---
 - name: debug ansible_facts os_family
   debug:
-    var: ansible_facts[‘os_family’]
+    var: ansible_facts['os_family']
 
 - name: Update packages cache on Debian systems (apt)
   become: true
   ansible.builtin.apt:
     cache_valid_time: '{{ cache_valid_time }}'
     update_cache: true
-  when: ansible_facts[‘os_family’] == "Debian"
+  when: ansible_facts['os_family'] == "Debian"
