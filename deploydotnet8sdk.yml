@@ -4,4 +4,3 @@
   roles:
     - update_pckg_cache
     - install_dotnet8sdk
-
