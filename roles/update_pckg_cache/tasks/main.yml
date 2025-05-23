@@ -1,0 +1,7 @@
+---
+- name: Update packages cache on Debian systems (apt)
+  become: true
+  ansible.builtin.apt:
+    cache_valid_time: '{{ cache_valid_time }}'
+    update_cache: true
+  when: ansible_family_os == "Debian"
