@@ -1,8 +1,4 @@
 ---
-- name: debug ansible_facts os_family
-  debug:
-    var: ansible_facts['os_family']
-
 - name: Update packages cache on Debian systems (apt)
   become: true
   ansible.builtin.apt:
