@@ -21,4 +21,17 @@
     cmd: dotnet publish NotesAppDotnet/NotesAppDotnet.sln --configuration Release --output /opt/deplopyment
     chdir: /tmp/deplopyment/
 
+- name: Create directory for SQL Database
+  ansible.builtin.file:
+    path: /opt/app_db
+    state: directory
+
+- name: Copy appsettings.json to target machine
+  copy:
+    src: appsettings.json
+    dest: /opt/deplopyment/appsettings.json
+
+
+
+
 
