@@ -1,1 +1,2 @@
 ansible_host: 10.186.0.9
+ansible_python_interpreter: /usr/bin/python3.12

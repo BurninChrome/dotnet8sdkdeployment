@@ -1,5 +1,6 @@
 ---
+# tasks file for dotnet8sdk
 - name: Install dotnet-8-sdk package
-  ansible.builtin.apt:
+  ansible.builtin.package:
     name: '{{ dotnet_package_name }}'
     state: present

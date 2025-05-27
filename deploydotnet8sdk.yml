@@ -2,5 +2,5 @@
 - name: Deploy .net-8.0 sdk
   hosts: dotnet8
   roles:
-    - update_pckg_cache
-    - install_dotnet8sdk
+    # - update_pckg_cache
+    - dotnet8sdk

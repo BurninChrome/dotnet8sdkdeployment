@@ -1,1 +1,3 @@
+---
+# vars file for dotnet8sdk
 dotnet_package_name: 'dotnet-sdk-8.0'
