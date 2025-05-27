@@ -1,0 +1,24 @@
+---
+# tasks file for dotnetapp
+- name: Create directory in /tmp
+  ansible.builtin.file:
+    path: /tmp/deplopyment/
+    state: directory
+
+- name: Fetch application source code on target machine
+  ansible.builtin.git:
+    repo: 'https://github.com/m-j/notes-app-dotnet.git'
+    dest: /tmp/deplopyment
+    version: 0.0.7
+
+- name: Create directory in /opt
+  ansible.builtin.file:
+    path: /opt/deplopyment
+    state: directory
+
+- name: Deploy the app to target directory
+  ansible.builtin.command:
+    cmd: dotnet publish NotesAppDotnet/NotesAppDotnet.sln --configuration Release --output /opt/deplopyment
+    chdir: /tmp/deplopyment/
+
+

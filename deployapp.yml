@@ -1,0 +1,6 @@
+---
+- name: Deploy dotnet8app
+  hosts: dotnet8
+  become: yes
+  roles:
+    - dotnetapp
