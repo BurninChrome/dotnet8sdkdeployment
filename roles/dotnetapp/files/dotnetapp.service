@@ -1,0 +1,9 @@
+[Unit]
+Description=My Dotnet App
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/dotnet /opt/deplopyment/NotesAppDotnet.dll
+
+[Install]
+WantedBy=multi-user.target

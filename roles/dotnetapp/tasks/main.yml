@@ -27,9 +27,26 @@
     state: directory
 
 - name: Copy appsettings.json to target machine
-  copy:
+  ansible.builtin.copy:
     src: appsettings.json
     dest: /opt/deplopyment/appsettings.json
+
+- name: Copy systemd service file
+  ansible.builtin.copy:
+   src: dotnetapp.service
+   dest: /etc/systemd/system/dotnetapp.service
+
+- name: Reload systemd deamon
+  ansible.builtin.systemd_service:
+    daemon_reload: true
+
+
+- name: Run application as a service
+  ansible.builtin.systemd_service:
+    name: dotnetapp
+    state: started
+    enabled: true
+
 
 
 
